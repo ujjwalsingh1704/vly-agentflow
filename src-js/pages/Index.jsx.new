@@ -1,0 +1,31 @@
+import { Button } from "../components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+
+function Index() {
+  const navigate = useNavigate();
+  
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="text-center p-8 max-w-2xl">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Welcome to Vly AI
+        </h1>
+        <p className="text-xl text-gray-600 mb-8">
+          Your AI-powered lead generation and management platform
+        </p>
+        <div className="flex justify-center gap-4">
+          <Button 
+            onClick={() => navigate('/auth')}
+            className="bg-blue-600 hover:bg-blue-700"
+          >
+            Get Started
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Index;
